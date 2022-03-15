@@ -40,13 +40,13 @@ int search(int* arr, int len, int value, int left) {
         k++;
       }
       return k;
-    } else if (arr[mid] > value) {
-        j = mid;
-    } else {
-        i = mid + 1;
-    }
-  return 0;
+      } else if (arr[mid] > value) {
+          j = mid;
+      } else {
+          i = mid + 1;
+      }
   }
+return 0;
 }
 
 int countPairs3(int *arr, int len, int value) {
