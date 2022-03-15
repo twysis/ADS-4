@@ -47,7 +47,7 @@ while (i < j) {
 	  i = mid + 1;
   }
 }
-return k;
+return 0;
 }
 
 int countPairs3(int *arr, int len, int value) {
