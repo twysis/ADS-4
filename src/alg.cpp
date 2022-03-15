@@ -29,7 +29,7 @@ int countPairs2(int *arr, int len, int value) {
   return k;
 }
 
-int cbinsearch(int* arr, int len, int value) {
+int cbinsearch(int* arr, int size, int number, int left) {
 int i = left, j = size, k = 0; // i - левая граница массива, j - правая
 while (i < j) {
   int mid = i + (j - i) / 2;
@@ -54,7 +54,7 @@ int countPairs3(int *arr, int len, int value) {
   int k = 0;
   for (int i = 0; i < len; i++) {
     if (value - arr[i] >= arr[i]) {
-      k += cbinsearch(arr, len, value - arr[i]);
+      k += cbinsearch(arr, len, value - arr[i], i);
       }
   }
   return k;
